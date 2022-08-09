@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov 19 18:26:00 2020
+# Process ID: 13188
+# Current directory: C:/Users/scott/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7880
+# Log file: C:/Users/scott/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/scott/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab6/lab6.xpr
+open_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench_topmod.tcl
+run 2000 ns
+run 2000 ns
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testbench_statemachine [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source testbench_statemachine.tcl
+run 200 ns
+open_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab6/lab6.xpr
+update_compile_order -fileset sources_1
+archive_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab6.xpr.zip -temp_dir C:/Users/scott/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13188-DESKTOP-QL7M0FJ -force -include_local_ip_cache
