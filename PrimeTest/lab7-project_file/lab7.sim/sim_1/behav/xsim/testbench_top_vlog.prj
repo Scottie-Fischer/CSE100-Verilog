@@ -1,0 +1,31 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab7.srcs/sources_1/imports/new/Full_Adder.v" \
+"../../../../lab7.srcs/sources_1/new/LSR_module.v" \
+"../../../../lab7.srcs/sources_1/new/comparator_4bitmodule.v" \
+"../../../../lab7.srcs/sources_1/new/comparator_module.v" \
+"../../../../lab7.srcs/sources_1/imports/new/countUD16L.v" \
+"../../../../lab7.srcs/sources_1/imports/new/countUD4L.v" \
+"../../../../lab7.srcs/sources_1/new/divider_module.v" \
+"../../../../lab7.srcs/sources_1/new/divider_statemachine.v" \
+"../../../../lab7.srcs/sources_1/imports/new/edge_detector.v" \
+"../../../../lab7.srcs/sources_1/imports/new/flash_module.v" \
+"../../../../lab7.srcs/sources_1/imports/new/hex7seg.v" \
+"../../../../lab7.srcs/sources_1/imports/lab7/lab7_clks.v" \
+"../../../../lab7.srcs/sources_1/imports/new/m4_1.v" \
+"../../../../lab7.srcs/sources_1/imports/new/m8_1.v" \
+"../../../../lab7.srcs/sources_1/new/prime_statemachine.v" \
+"../../../../lab7.srcs/sources_1/new/primetester_module.v" \
+"../../../../lab7.srcs/sources_1/imports/new/ring_counter_module.v" \
+"../../../../lab7.srcs/sources_1/imports/new/selector.v" \
+"../../../../lab7.srcs/sources_1/new/subtractor_module.v" \
+"../../../../lab7.srcs/sources_1/imports/new/time_counter_module.v" \
+"../../../../lab7.srcs/sources_1/new/top_module.v" \
+"../../../../lab7.srcs/sources_1/new/top_statemachine.v" \
+"../../../../lab7.srcs/sim_1/new/testbench_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,54 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/Full_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Full_Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/LSR_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LSR_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/comparator_4bitmodule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator_4bitmodule
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/comparator_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/countUD16L.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module countUD16L
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/countUD4L.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module countUD4L
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/divider_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/divider_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_statemachine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/edge_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module edge_detector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/lab7/lab7_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab7_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/lab7/lab7_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/lab7/lab7_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/lab7/lab7_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/lab7/lab7_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/m4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/prime_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prime_statemachine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/primetester_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module primetester_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/subtractor_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtractor_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/imports/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sources_1/new/top_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_statemachine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab7/lab7.srcs/sim_1/new/testbench_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_top
