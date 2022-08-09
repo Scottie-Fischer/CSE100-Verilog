@@ -1,0 +1,2550 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov 12 08:36:38 2020
+# Process ID: 13940
+# Current directory: C:/Users/scott/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16528
+# Log file: C:/Users/scott/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/scott/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 734.469 ; gain = 97.648
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 08:42:15 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 08:42:15 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A89CA1A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1924.617 ; gain = 1120.379
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'FlashA' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:34]
+ERROR: [VRFC 10-3180] cannot find port 'FlashAlt' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 08:50:54 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 08:50:55 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 08:52:20 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 08:52:20 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 08:56:18 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 08:56:18 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:01:22 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:01:22 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:04:12 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:04:12 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top testbench_topmod [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-3248] data object 'Flash' is already declared [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+ERROR: [VRFC 10-3703] second declaration of 'Flash' ignored [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+ERROR: [VRFC 10-2865] module 'top_module' ignored due to previous errors [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_hw
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-3248] data object 'Flash' is already declared [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+ERROR: [VRFC 10-3703] second declaration of 'Flash' ignored [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+ERROR: [VRFC 10-2865] module 'top_module' ignored due to previous errors [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3283] element index 6 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:44]
+WARNING: [VRFC 10-3283] element index 7 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:45]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2300.363 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 2300.363 ; gain = 0.000
+run 2000 ns
+run 2000 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:50:40 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:50:40 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:51:51 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:51:51 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:56:47 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:56:47 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 09:57:47 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 09:57:47 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2330.707 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A89CA1A
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:21:09 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:21:10 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+close [ open C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/storematch_module.v w ]
+add_files C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/storematch_module.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:27:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:27:46 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:33:19 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:33:19 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:36:28 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:36:28 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:41:55 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:41:55 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 10:47:52 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 10:47:52 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property top testbench_flash [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'FlashAlt' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:33]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+ERROR: [VRFC 10-2989] 'FlashAlt' is not declared [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:57]
+ERROR: [VRFC 10-2865] module 'testbench_flash' ignored due to previous errors [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+ERROR: [VRFC 10-2989] 'FlashAlt' is not declared [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:57]
+ERROR: [VRFC 10-2865] module 'testbench_flash' ignored due to previous errors [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.testbench_flash
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_flash_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_flash_behav -key {Behavioral:sim_1:Functional:testbench_flash} -tclbatch {testbench_flash.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_flash.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_flash_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2811.727 ; gain = 9.660
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.testbench_flash
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_flash_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_flash_behav -key {Behavioral:sim_1:Functional:testbench_flash} -tclbatch {testbench_flash.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_flash.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_flash_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.testbench_flash
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_flash_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_flash_behav -key {Behavioral:sim_1:Functional:testbench_flash} -tclbatch {testbench_flash.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_flash.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_flash_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:05:20 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:05:20 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:09:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:09:46 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.testbench_flash
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_flash_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_flash_behav -key {Behavioral:sim_1:Functional:testbench_flash} -tclbatch {testbench_flash.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_flash.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_flash_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_flash' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_flash_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_flash
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_flash_behav xil_defaultlib.testbench_flash xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.testbench_flash
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_flash_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:21:20 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:21:20 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property top testbench_statemachine [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_statemachine' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_statemachine_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_statemachine
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.testbench_statemachine
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_statemachine_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_statemachine_behav -key {Behavioral:sim_1:Functional:testbench_statemachine} -tclbatch {testbench_statemachine.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_statemachine.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_statemachine_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_statemachine' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_statemachine_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_statemachine
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.testbench_statemachine
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_statemachine_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_statemachine_behav -key {Behavioral:sim_1:Functional:testbench_statemachine} -tclbatch {testbench_statemachine.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_statemachine.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_statemachine_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2811.727 ; gain = 0.000
+run 2000 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_statemachine' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_statemachine_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_statemachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_statemachine
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_statemachine_behav xil_defaultlib.testbench_statemachine xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.testbench_statemachine
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_statemachine_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2811.727 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:34:24 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:34:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1
+[Thu Nov 12 11:35:19 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:35:19 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:38:20 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 11:41:49 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 11:41:49 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property top testbench_gamecounter [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_gamecounter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_gamecounter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_gamecounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_gamecounter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_gamecounter_behav xil_defaultlib.testbench_gamecounter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.testbench_gamecounter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_gamecounter_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_gamecounter_behav -key {Behavioral:sim_1:Functional:testbench_gamecounter} -tclbatch {testbench_gamecounter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_gamecounter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_gamecounter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.727 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:14:24 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:14:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:16:06 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:16:06 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:20:15 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:20:15 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:27:11 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:27:11 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:29:04 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:29:04 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:34:48 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:34:48 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1
+[Thu Nov 12 12:42:18 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:42:19 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:45:04 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:48:02 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:48:02 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:52:56 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:52:56 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 12:57:17 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 12:57:17 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:04:56 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:04:56 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:29:11 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:29:11 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:48:43 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:48:43 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:50:08 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:50:09 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:52:41 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:52:41 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 13:58:22 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 13:58:22 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 14:02:44 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 14:02:44 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream
+[Thu Nov 12 14:09:15 2020] Launched synth_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/synth_1/runme.log
+[Thu Nov 12 14:09:15 2020] Launched impl_1...
+Run output will be captured here: C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.runs/impl_1/top_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+export_ip_user_files -of_objects  [get_files C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/counter4bit_module.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/storematch_module.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/counter4bit_module.v C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/storematch_module.v}
+file delete -force C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/counter4bit_module.v C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/storematch_module.v
+set_property top testbench_topmod [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'FlashBO' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:59]
+ERROR: [VRFC 10-3180] cannot find port 'FlashAO' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:58]
+ERROR: [VRFC 10-3180] cannot find port 'gameN' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:57]
+ERROR: [VRFC 10-3180] cannot find port 'rngN' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:56]
+ERROR: [VRFC 10-3180] cannot find port 'MatchO' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:55]
+ERROR: [VRFC 10-3180] cannot find port 'States' on this module [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v:54]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2811.727 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'Q' [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+WARNING: [VRFC 10-3283] element index 6 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:44]
+WARNING: [VRFC 10-3283] element index 7 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:45]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'Q' [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+WARNING: [VRFC 10-3283] element index 6 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:44]
+WARNING: [VRFC 10-3283] element index 7 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:45]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'Q' [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+WARNING: [VRFC 10-3283] element index 6 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:44]
+WARNING: [VRFC 10-3283] element index 7 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:45]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'Q' [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+WARNING: [VRFC 10-3283] element index 6 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:44]
+WARNING: [VRFC 10-3283] element index 7 into 'D' is out of bounds [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v:45]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 15 for port 'Q' [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:113]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2811.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_topmod' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_topmod_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/flash_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/game_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/hex7seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab5_clks
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clkcntrl4
+INFO: [VRFC 10-2458] undeclared symbol XLXN_78, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:247]
+INFO: [VRFC 10-2458] undeclared symbol qsec0, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:268]
+INFO: [VRFC 10-2458] undeclared symbol qsec2, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:269]
+INFO: [VRFC 10-2458] undeclared symbol qsec3, assumed default net type wire [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/imports/lab5/lab5_clks.v:278]
+INFO: [VRFC 10-311] analyzing module FTCE_MXILINX_clkcntrl4
+INFO: [VRFC 10-311] analyzing module CB4CE_MXILINX_clkcntrl4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/led_shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/m8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/ring_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/rng_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rng_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/state_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/store_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/time_counter_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_counter_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+WARNING: [VRFC 10-159] /* in comment [C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sources_1/new/top_module.v:77]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.srcs/sim_1/new/testbench_topmod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_topmod
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9bf2937d86db49999bc9f65cbcaee23e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_topmod_behav xil_defaultlib.testbench_topmod xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.XOR2
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.FTCE_MXILINX_clkcntrl4
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.AND4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.AND3
+Compiling module unisims_ver.AND2
+Compiling module unisims_ver.VCC
+Compiling module xil_defaultlib.CB4CE_MXILINX_clkcntrl4
+Compiling module unisims_ver.BUF
+Compiling module xil_defaultlib.clkcntrl4
+Compiling module unisims_ver.STARTUPE2
+Compiling module xil_defaultlib.lab5_clks
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.state_machine_module
+Compiling module xil_defaultlib.rng_module
+Compiling module xil_defaultlib.store_module
+Compiling module xil_defaultlib.game_counter_module
+Compiling module xil_defaultlib.time_counter_module
+Compiling module xil_defaultlib.led_shift_module
+Compiling module xil_defaultlib.ring_counter_module
+Compiling module xil_defaultlib.selector
+Compiling module xil_defaultlib.m8_1
+Compiling module xil_defaultlib.hex7seg
+Compiling module xil_defaultlib.flash_module
+Compiling module xil_defaultlib.top_module
+Compiling module xil_defaultlib.testbench_topmod
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_topmod_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2811.727 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_topmod_behav -key {Behavioral:sim_1:Functional:testbench_topmod} -tclbatch {testbench_topmod.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_topmod.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_topmod_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2811.727 ; gain = 0.000
+run 2000 ns
+archive_project C:/Users/scott/Desktop/Fall_Quarter/CSE100/Labs/lab5.xpr.zip -temp_dir C:/Users/scott/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13940-DESKTOP-QL7M0FJ -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/scott/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13940-DESKTOP-QL7M0FJ' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/scott/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13940-DESKTOP-QL7M0FJ/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
